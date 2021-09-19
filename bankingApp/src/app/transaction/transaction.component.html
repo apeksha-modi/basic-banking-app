@@ -1,0 +1,21 @@
+<div class="row p-3" style="background-color: rgb(180, 218, 230); font-family: cursive; height: 70vh;">
+
+<table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><h3>#</h3></th>
+            <th scope="col"><h3>FROM</h3></th>
+            <th scope="col"><h3>TO</h3></th>
+            <th scope="col"><h3>AMOUNT</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of transactions" class="text-dark">
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.sender}}</td>
+            <td>{{item.receiver}}</td>
+          <td style="font-weight: 900; font-size: large; color: rgb(212, 148, 8);">{{item.ammount}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,33 @@
+<div class="row p-5" style="text-align: left; font-family: cursive; ">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="background-color:rgb(180, 218, 230) ; height: fit-content; width: 35%; border-radius: 20%;">
+            <div class="row p-2">
+                <h3>Name: {{customer.name}}<br></h3>
+                <h4>Email: {{customer.email}}<br></h4>
+                <h4>Balance in Account: {{customer.balance}}<br></h4>
+            </div>
+            <div class="row p-2" style="height: 5vh;">  
+                <div class="col-md-7">
+                    <h4> Transact amount to:</h4>
+                </div>
+                <div class="col-md-4">
+                    <select [(ngModel)]="receiver" style="height: 5vh;">
+                        <option *ngFor="let item of customers"> {{item.email}} </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-2 p-2">
+                <div class="col-md-7">
+                    <h4>Enter Amount: </h4>
+                </div>
+                <div class="col-md-4">
+                    <input type="number" [(ngModel)]="ammount" >
+                </div>
+            </div>
+            <div class="row p-2">
+                <button class="btn btn-warning" (click)="maketransactions()"> SEND </button>
+            </div>
+           
+    </div>
+    <div class="col-md-4"></div>
+</div>
